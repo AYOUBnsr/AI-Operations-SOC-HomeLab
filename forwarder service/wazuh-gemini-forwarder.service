@@ -1,0 +1,26 @@
+[Unit]
+Description=Wazuh FIM to Gemini analysis forwarder
+After=network-online.target wazuh-manager.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=wazuh-gemini
+Group=wazuh-gemini
+SupplementaryGroups=wazuh
+EnvironmentFile=/etc/wazuh-gemini-forwarder.env
+ExecStart=/opt/wazuh-gemini-forwarder/venv/bin/python /opt/wazuh-gemini-forwarder/wazuh_gemini_forwarder.py
+WorkingDirectory=/opt/wazuh-gemini-forwarder
+Restart=always
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/var/ossec/logs/alerts
+ReadWritePaths=/var/lib/wazuh-gemini-forwarder
+RestrictAddressFamilies=AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target
