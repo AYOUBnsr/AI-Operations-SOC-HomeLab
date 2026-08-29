@@ -1,4 +1,4 @@
-# 🛡️ AI Operations + SOC Cyber HomeLab
+# 🛡️ AI Operations + SOCHomeLab
 
 **A self-built home SOC: Wazuh + NetAlertX + Grafana, with an AI security analyst in the loop.**
 
