@@ -1,4 +1,4 @@
-# 🛡️ AI Operations + SOCHomeLab
+<h1 align="center"> 🛡️ AI Operations + SOCHomeLab </h1>
 
 **A self-built home SOC: Wazuh + NetAlertX + Grafana, with an AI security analyst in the loop.**
 
